@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .center{
+        width: 600px;;
+        height: 800px;
+        
+        position: relative;
+    }
+    .box{
+        width: 500px;
+        height: 600px;
+        position: absolute;
+        left: 0; top:0; right: 0;bottom: 0;margin: auto;
+        transform-style: preserve-3d;
+        transition: all 2s ease;
+    }
+    .box:hover{
+        /* transform: scale(1.25,1.25); */
+    }
+    .imgbox{
+        float: left;
+        width:125px;
+        height: 400px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 2s ease;
+        
+    }
+    .imgbox:hover{
+        transform: rotateX(360deg);
+    }
+    .one{
+        width:125px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateZ(-25px) rotate(180deg);
+        background-color: slateblue;
+        background: url(img/14.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .two{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(25px);
+        background: #f6f6f6;
+
+    }
+    .three{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(-125px);
+        background: #f6f6f6;
+    }
+    .four{
+        width:125px;
+        height: 400px;
+        transform: translateZ(25px) ;
+       
+        position: absolute;
+        left: 0;
+        top:0;
+        background: url(img/10.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    
+    .five{
+        width:125px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateZ(-25px) rotate(180deg);
+        background-color: slateblue;
+        background: url(img/15.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .six{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(25px);
+        background: #f6f6f6;
+
+    }
+    .seeven{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(-125px);
+        background: #f6f6f6;
+    }
+    .eight{
+        width:125px;
+        height: 400px;
+        transform: translateZ(25px) ;
+       
+        position: absolute;
+        left: 0;
+        top:0;
+        background: url(img/11.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .nine{
+        width:125px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateZ(-25px) rotate(180deg);
+        background-color: slateblue;
+        background: url(img/16.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .ten{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(25px);
+        background: #f6f6f6;
+
+    }
+    .eleven{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(-125px);
+        background: #f6f6f6;
+    }
+    .twitf{
+        width:125px;
+        height: 400px;
+        transform: translateZ(25px) ;
+       
+        position: absolute;
+        left: 0;
+        top:0;
+        background: url(img/12.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .threeth{
+        width:125px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateZ(-25px) rotate(180deg);
+        background-color: slateblue;
+        background: url(img/17.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .fourth{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(25px);
+        background: #f6f6f6;
+
+    }
+    .fifty{
+        width: 125px;
+        height: 50px;
+        transform: rotateX(90deg) translateZ(-125px);
+        background: #f6f6f6;
+    }
+    .sixty{
+        width:125px;
+        height: 400px;
+        transform: translateZ(25px) ;
+       
+        position: absolute;
+        left: 0;
+        top:0;
+        background: url(img/13.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+   
+</style>
+<body>
+    <div class="center">
+        <div class="box">
+            <div class="imgbox">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+            </div>
+            <div class="imgbox">
+                <div class="five"></div>
+                <div class="six"></div>
+                <div class="seeven"></div>
+                <div class="eight"></div>
+            </div>
+            <div class="imgbox">
+                <div class="nine"></div>
+                <div class="ten"></div>
+                <div class="eleven"></div>
+                <div class="twitf"></div>
+            </div>
+            <div class="imgbox">
+                <div class="threeth"></div>
+                <div class="fourth"></div>
+                <div class="fifty"></div>
+                <div class="sixty"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var imgbox=document.querySelectorAll(".imgbox");
+        var box=document.querySelector(".box");
+        var x=0;
+
+        function run(){
+            box.style.transform="scale(1.25,1.25)";
+            for(let i=0;i<imgbox.length;i++){
+
+                setTimeout(function (){
+                    imgbox[i].style.transform="rotateX("+180*x+"deg)";
+                    console.log(i);
+                    if(i==3){
+                        box.style.transform="scale(1,1)";
+                    }
+                },i*1000);
+            }
+            x++;
+            
+        }
+    
+        setInterval(run,8000);
+
+
+
+
+
+    </script>
+</body>
+</html>
